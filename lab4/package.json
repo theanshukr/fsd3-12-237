@@ -2,16 +2,16 @@
   "name": "lab4",
   "version": "1.0.0",
   "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "module",
   "main": "prg7.js",
   "scripts": {
-    "dev": "nodemon prg7.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon prg7.js"
   },
-  "dependencies": {
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
     "nodemon": "^3.1.14"
   }
-  
 }

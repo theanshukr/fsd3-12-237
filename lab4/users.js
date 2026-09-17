@@ -1,15 +1,16 @@
+// we use in memory database
 let users = [
   {
     id: 1,
-    name: "John Doe",
-    mobile: "123-456-7890",
-    email: "john@example.com",
+    name: "Amit Sharma",
+    mob: "98345xxxxx",
+    email: "amit.example@exam.com",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    mobile: "098-765-4321",
-    email: "jane@example.com",
+    name: "Monika Verma",
+    mob: "92345xxxxx",
+    email: "moni.example@exam.com",
   },
 ];
 

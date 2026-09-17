@@ -1,0 +1,31 @@
+### Start server
+# Run this in terminal before testing:
+# cd "D:\ABES\Full Stack Development\FSD-12-237\lab4"
+# npm run dev
+
+### GET all users
+GET http://localhost:4000/api/users
+
+### POST add user
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@example.com"
+}
+
+### GET single user
+GET http://localhost:4000/api/users/1
+
+### PUT update user
+PUT http://localhost:4000/api/users/1
+Content-Type: application/json
+
+{
+  "name": "Updated User",
+  "email": "updated@example.com"
+}
+
+### DELETE user
+DELETE http://localhost:4000/api/users/1

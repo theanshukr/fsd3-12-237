@@ -1,14 +1,12 @@
-import http from 'http'
+import http from "http";
 
 const server = http.createServer();
 
-const port=3000;
-
-server.on('request',(req,res)=>{
-    res.write("hello from server");
-    res.end();
+server.on("request", (req, res) => {
+  res.write("Hello from server");
+  res.end();
 });
 
-server.listen(port,()=>{
-    console.log("server is running")
+server.listen(4444, () => {
+  console.log("Server is running...");
 });

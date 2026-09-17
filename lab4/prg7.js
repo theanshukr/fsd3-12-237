@@ -1,31 +1,30 @@
-import http from 'http';
-const port = 3000;
+import http from "http";
+import { getUsers } from "./users.js";
 
 const server = http.createServer((req, res) => {
-    if (req.url == "/api/users" && req.method == "GET") {
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ message: "" }));
-    
-    }
-    else if (req.url == "/api/users" && req.method == "POST") {
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ message: "POST request received for /api/users" }));
-    }
-    else if (req.url == "/api/users" && req.method == "PUT") {
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ message: "PUT request received for /api/users" }));
-    }
-    else if (req.url == "/api/users" && req.method == "DELETE") {
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ message: "DELETE request received for /api/users" })); 
-    }
-    else{
-        res.statusCode = 404;
-        res.end(JSON.stringify({ message: "Not Found" }));
-    }
+  if (req.url === "/api/users" && req.method === "GET") {
+    res.end(JSON.stringify(getUsers()));
+  } 
+  
+  else if (req.url === "/api/users" && req.method === "POST") {
+    res.end(JSON.stringify({ msg: "add user" }));
+  } 
+  
+  else if (req.url === "/api/users/1" && req.method === "GET") {
+    res.end(JSON.stringify({ msg: "single user with id 1" }));
+  } 
+  
+  else if (req.url === "/api/users/1" && req.method === "PUT") {
+    res.end(JSON.stringify({ msg: "update user 1" }));
+  } 
+  
+  else if (req.url === "/api/users/1" && req.method === "DELETE") {
+    res.end(JSON.stringify({ msg: "remove 1" }));
+  } 
+  else {
+    res.statusCode = 404;
+    res.end();
+  }
 });
 
-
-server.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+server.listen(3000, () => console.log("prg7 is running"));

@@ -11,6 +11,7 @@ const working=(name)=>{
 const checkout=(name)=>{
     console.log(`${name} logged out`);
 
+    
 }
 const task=new EventEmitter();
 task.on('start',start)

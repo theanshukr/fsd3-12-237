@@ -5,7 +5,8 @@ const button=new EventEmitter();
 
 button.on("click",(name) => {
     console.log(`Button clicked by: ${name}`);
-});
+    
+}); 
 
 
 button.emit("click", "Alec")

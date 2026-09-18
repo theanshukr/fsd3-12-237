@@ -13,6 +13,7 @@ const server = http.createServer((req, res) => {
             <h2> Price: 90000</h2>
             <h3> Discount: 30%</h3>
     `);
+  
     res.end();
   } else if (req.url === "/contact") {
     res.end("<h1>Contact Us");

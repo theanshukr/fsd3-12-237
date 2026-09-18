@@ -9,6 +9,7 @@ class DomClass extends EventEmitter{
     }
     dispatchEvent(eventName,eventData={}){
         const event={
+            
             type:eventName,
             timestamp:new Date(),
             ...eventData
